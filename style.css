@@ -1,0 +1,88 @@
+body{
+    background-color: grey;
+}
+
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--clr-white);
+    display: grid;
+    
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    z-index: 789;
+    transition: var(--transition);
+    transition-duration: 3s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 1s;
+
+}
+/* .hide-preloader kl JS*/
+.hide-preloader{
+ z-index: -789;
+ visibility: hidden;
+}
+
+header {
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+
+.video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;  
+/* z-index: -2; pozwala umieścić text na środku video */
+}
+
+h1 {
+    color: rgb(0, 195, 255);
+}
+
+/* cały btn */
+.switch-btn{
+    position: absolute;
+    bottom: 10%;
+    width: 10rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 7px;
+    border: none;
+    transition: var(--transition);
+}
+/* sprzestrzenie span w btn*/
+.switch-btn span {
+    display: inline-block;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+/* color switch w btn*/
+.switch{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: rgb(0, 195, 255);
+    border-radius: 7px;
+    transition: var(--transition);
+}
+/* .slide niebieski kontener dot. JS*/
+.slide .switch{
+    left: 50%;
+}
+
